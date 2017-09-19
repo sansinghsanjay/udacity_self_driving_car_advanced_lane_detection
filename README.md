@@ -44,11 +44,11 @@ In this project, Python-3.5.2 is used with following packages:
 
 ## Algorithm
 1. First, we perform camera calibration (estimating parameters of lens and image sensor to correct lens distortion):
-	i. For camera calibration, it is proven to use classical black-white chessboard image.
-	ii. We read various black-white chessboard images and calculate "image points" and "object points" by using OpenCV functions like: cv2.findChessboardCorners()
-	iii. After getting "image points" and "object points" from above step, we perform camera calibration on a black-white chessboard image by using OpenCV function: cv2.calibrateCamera().
-	iv. The estimated parameters in above step are used to undistort images by using an OpenCV function: cv2.undistort()
-	v. Following is a sample of given image (left) and undistorted image (right) after camera calibration step:
+	1. For camera calibration, it is proven to use classical black-white chessboard image.
+	2. We read various black-white chessboard images and calculate "image points" and "object points" by using OpenCV functions like: cv2.findChessboardCorners()
+	3. After getting "image points" and "object points" from above step, we perform camera calibration on a black-white chessboard image by using OpenCV function: cv2.calibrateCamera().
+	4. The estimated parameters in above step are used to undistort images by using an OpenCV function: cv2.undistort()
+	5. Following is a sample of given image (left) and undistorted image (right) after camera calibration step:
 <p align="center">
 <img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/cameraCalibration_1.png">
 </p>
