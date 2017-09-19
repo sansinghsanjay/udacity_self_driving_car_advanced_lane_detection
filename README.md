@@ -1,5 +1,11 @@
 # Udacity Self Driving Car Nanodegree: Advanced Lane Detection
- [sample_input.gif] [technologies_used.png] [sample_output.png]
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/sample_input_output/sample_input.gif">
+&nbsp &nbsp
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/technologies_used/technologies_used.png">
+&nbsp &nbsp
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/sample_input_output/sample_output.gif">
+</p>
 
 ## Objective
 This project is for marking lanes on road so that Self Driving Cars can run on correct path. 
@@ -12,7 +18,9 @@ Above GIF images are showing sample input (at left side) and sample output (at r
 
 ### Self Driving Cars
 Self Driving Cars are unmanned ground vehicles, also known as Autonomus Cars, Driverless Cars, Robotic Cars.
-[Self Driving Car Image]
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/self-driving-car.jpg">
+</p>
 
 ### Technologies Used
 Following are the technologies used by these Self Driving Cars to navigate:
@@ -40,21 +48,47 @@ In this project, Python-3.5.2 is used with following packages:
 	ii. We read various black-white chessboard images and calculate "image points" and "object points" by using OpenCV functions like: cv2.findChessboardCorners()
 	iii. After getting "image points" and "object points" from above step, we perform camera calibration on a black-white chessboard image by using OpenCV function: cv2.calibrateCamera().
 	iv. The estimated parameters in above step are used to undistort images by using an OpenCV function: cv2.undistort()
-	v. Following is a sample of given image (left) and undistorted image (right) after camera calibration step: [image]
+	v. Following is a sample of given image (left) and undistorted image (right) after camera calibration step:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/cameraCalibration_1.png">
+</p>
 
-2. We read an image: [image]
+2. We read an image:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/input_image.png">
+</p>
 
-3. Undistort the above image by using camera calibration parameters obtained in (1.iii): [image]
+3. Undistort the above image by using camera calibration parameters obtained in (1.iii):
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/undistorted_image.png">
+</p>
 
-4. On the undistorted image, we perform perspective transform to generate bird's eye view: [image]
+4. On the undistorted image, we perform perspective transform to generate bird's eye view:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/perspective_transform_image.png">
+</p>
 
-5. Then, we transform above obtained image into HLS and LAB color space: [image] [image]
+5. Then, we transform above obtained image into HLS (left) and LAB (right) color space:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/hls_image.png">
+&nbsp &nbsp
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/lab_image.png">
+</p>
 
-6. HLS and LAB color space image are combined by putting 1 at all position where both HLS and LAB have pixel value 1: [image]
+6. HLS and LAB color space image are combined by putting 1 at all position where both HLS and LAB have pixel value 1:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/combine_hls_lab_image.png">
+</p>
 
-7. Then, we perform various mathematical operations to draw mark lanes on input image: [image]
+7. Then, we perform various mathematical operations to draw mark lanes on input image:
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/lane_marked_image.png">
+</p>
 
-8. At last, we write data about lanes (final output): [image]
+8. At last, we write data about lanes (final output):
+<p align="center">
+<img src="https://github.com/sansinghsanjay/udacity_self_driving_car_advanced_lane_detection/blob/master/images/lane_marked_data_marked_image.png">
+</p>
 
 
 ## How To Use?
